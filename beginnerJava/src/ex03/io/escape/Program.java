@@ -13,19 +13,21 @@ public class Program {
 		kor3 = 80;
 		
 		total = kor1 + kor2 + kor3;
-		avg = total / 3.0f;
+		avg = total / 3;
 		
 		// 성적 출력 부분 
 		
-		System.out.println("┌────────────────────────────────┐");
-		System.out.println("│          성적 출력                │");
-		System.out.println("└────────────────────────────────┘");
+		// 성적 출력 부분 
+		
+		System.out.print("┌────────────────────────────────┐\n");
+		System.out.print("│          성적 출력                │\n");
+		System.out.print("└────────────────────────────────┘\n");
 
-		System.out.printf("\t국어1 : %d\n", kor1);
-		System.out.printf("\t국어2 : %d\n", kor2);
-		System.out.printf("\t국어3 : %d\n", kor3);
-		System.out.printf("\t총점 : %d\n", total);
-		System.out.printf("\t평균 : %6.2f", avg);		
+		System.out.print("\t국어1 : 0\n");
+		System.out.print("\t국어2 : 0\n");
+		System.out.print("\t국어3 : 0\n");
+		System.out.print("\t총점 : 0\n");
+		System.out.print("\t평균 : 0.00\n");	
 
 	}
 
