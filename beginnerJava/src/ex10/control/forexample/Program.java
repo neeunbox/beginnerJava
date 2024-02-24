@@ -1,80 +1,35 @@
 package ex10.control.forexample;
 
-import java.util.Scanner;
-
 public class Program {
 	
 	public static void main(String[] args) {
 		
-		int kor1, kor2, kor3;
-		int total;
-		float avg;
-				
-		Scanner scan = new Scanner(System.in);
+		int total = 0;
 		
-		kor1 = 0;
-		kor2 = 0;
-		kor3 = 0;
-		
-		while(true) {	
-			// 성적 입력 부분
-			System.out.println("┌────────────────────────────────┐");
-			System.out.println("│          성적 입력                │");
-			System.out.println("└────────────────────────────────┘");
-			
-			// kor1 input
-			do{
-				System.out.print("국어1:");
-				kor1 = scan.nextInt();
-			
-				if (kor1<0 || 100<kor1) {					
-					System.out.println("성정범위(0~100)을 벗어났습니다.");
-				}
-				
-			}while(kor1<0 || 100<kor1);
-
-			// kor2 input
-			do{
-				System.out.print("국어2:");
-				kor2 = scan.nextInt();
-				
-				if (kor2<0 || 100<kor2) {					
-					System.out.println("성정범위(0~100)을 벗어났습니다.");
-				}
-				
-			}while(kor2<0 || 100<kor2);
-			
-			// kor3 input
-			do{
-				System.out.print("국어3:");
-				kor3 = scan.nextInt();
-				
-				if (kor3<0 || 100<kor3) {					
-					System.out.println("성정범위(0~100)을 벗어났습니다.");
-				}
-				
-			}while(kor3<0 || 100<kor3);
-			
-			// 성적 출력 부분 
-			System.out.println("┌────────────────────────────────┐");
-			System.out.println("│          성적 출력                │");
-			System.out.println("└────────────────────────────────┘");
-			
-			total = kor1 + kor2 + kor3;
-			avg = total / 3.0f;
-	
-			// 3, 2, 1
-//			for(int i=0; i<3; i++) {				
-//				System.out.printf("국어%d : %3d\n", 3-i, kor1);
-//			}
-			
-			for(int i=0; i<3; i++) {				
-				System.out.printf("국어%d : %3d\n", i+1, kor1);
-			}
-			
-			System.out.printf("총점 : %3d\n", total);
-			System.out.printf("평균 : %6.2f\n", avg);
+		// 1~10 까지의 합
+		for(int i=0; i<10; i++ ) {
+			total += 1+i;
 		}
 
+		System.out.printf("total is %d\n", total);
+		
+		// 초기
+		total = 0;
+		
+		// 3~7 까지의 합 
+		for(int i=0; i<5; i++) {
+			total += 3+i;
+		}
+		
+		System.out.printf("total is %d\n", total);
+
+		
+		// 초기
+		total = 0;
+		
+		// 산수좀 하는 사람 3~7 까지의 합 
+		total = 5*(3+7)/2;
+
+		System.out.printf("total is %d\n", total);
 	}
 }
