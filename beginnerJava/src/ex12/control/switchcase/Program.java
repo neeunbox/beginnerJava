@@ -1,4 +1,4 @@
-package ex11.control.elseif;
+package ex12.control.switchcase;
 
 import java.util.Scanner;
 
@@ -17,6 +17,9 @@ public class Program {
 		kor2 = 0;
 		kor3 = 0;
 		
+
+		//라벨사용
+		종료: 
 		while(true) {	
 			// 메인 메뉴 부분
 			System.out.println("┌────────────────────────────────┐");
@@ -28,7 +31,9 @@ public class Program {
 			System.out.print("\t>");
 			menu = scan.nextInt();
 			
-			if(menu == 1) {
+			// switch break 는 switch 문만 벗어난다.
+			switch(menu) {
+			case 1:
 				// 성적 입력 부분
 				System.out.println("┌────────────────────────────────┐");
 				System.out.println("│          성적 입력                │");
@@ -66,8 +71,9 @@ public class Program {
 					}
 					
 				}while(kor3<0 || 100<kor3);				
-				
-			} else if (menu == 2) {
+
+				break;
+			case 2:
 				// 성적 출력 부분 
 				System.out.println("┌────────────────────────────────┐");
 				System.out.println("│          성적 출력                │");
@@ -83,13 +89,15 @@ public class Program {
 				
 				System.out.printf("총점 : %3d\n", total);
 				System.out.printf("평균 : %6.2f\n", avg);
-				
-			} else if (menu == 3) {
-				//System.exit(0); 좋은 방법이 아니에요.
+
 				break;
-			} else {
+			case 3:
+				// 라벨사용
+				break 종료;
+			default:
 				System.out.println("입력 오류 1~3 까지만 입력할 수 있습니다.");
 			}
+			
 		}
 		System.out.println("Good bye~");
 	}
