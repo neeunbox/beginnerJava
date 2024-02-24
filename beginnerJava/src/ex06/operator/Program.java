@@ -1,11 +1,11 @@
-package ex05.scanner;
+package ex06.operator;
 
 import java.util.Scanner;
 
 public class Program {
 
 	public static void main(String[] args) {
-		
+
 		int kor1, kor2, kor3;
 		int total;
 		float avg;
@@ -23,11 +23,10 @@ public class Program {
 		
 		System.out.print("국어1:");
 		kor1 = scan.nextInt();
-		System.out.print("국어2:");
-		kor2 = scan.nextInt();
-		System.out.print("국어3:");
-		kor3 = scan.nextInt();
 		
+		int validate = (0<=kor1 && kor1<=100)?1:0;
+		System.out.println(validate);
+
 		
 		// 성적 출력 부분 
 		System.out.println("┌────────────────────────────────┐");
@@ -41,7 +40,7 @@ public class Program {
 		System.out.printf("국어2 : %3d\n", kor2);
 		System.out.printf("국어3 : %3d\n", kor3);
 		System.out.printf("총점 : %3d\n", total);
-		System.out.printf("평균 : %6.2f\n", avg);
+		System.out.printf("평균 : %6.2f\n", avg);		
 
 	}
 

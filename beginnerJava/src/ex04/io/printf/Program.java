@@ -27,7 +27,7 @@ public class Program {
 		System.out.printf("\t국어2 : %3d\n", kor2);
 		System.out.printf("\t국어3 : %3d\n", kor3);
 		System.out.printf("\t총점 : %3d\n", total);
-		System.out.printf("\t평균 : %6.2f", avg);
+		System.out.printf("\t평균 : %6.2f\n", avg);
 
 	}
 
